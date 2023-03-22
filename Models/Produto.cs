@@ -1,4 +1,6 @@
-﻿namespace APICatalogoMinimal.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace APICatalogoMinimal.Models;
 
 public class Produto
 {
@@ -18,5 +20,6 @@ public class Produto
 
     public int CategoriaId { get; set; }
 
+    [JsonIgnore]
     public Categoria? Categoria { get; set; }
 }
